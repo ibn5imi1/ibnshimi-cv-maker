@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="CV MAKER is a website that helps you build a CV and help you get a job faster"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>CV MAKER</title>
+  </head>
+  <body>
+    <main>
+      <!-- start inputs section -->
+      <section class="inputs">
+        <!-- start input personal data -->
+        <div class="input_container open">
+          <div class="personal input_title" id="personal">
+            <h3>Personal</h3>
+            <div class="icon">
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="personal_content input_content">
+            <!-- start  photo_fullname_email-->
+            <div class="photo_fullname_email">
+              <div class="photo">
+                <div class="photo_edit">
+                  <span>Photo</span>
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                  <ul>
+                    <li id="edit">
+                      <i class="fa-solid fa-pen"></i>
+                      <input
+                        type="file"
+                        id="image_input"
+                        accept="image/*"
+                        style="display: none"
+                      />
+                      Edit
+                    </li>
+                    <li id="remove">
+                      <i class="fa-solid fa-trash"></i>
+                      Delete
+                    </li>
+                  </ul>
+                </div>
+                <div class="add_photo"></div>
+              </div>
+              <div class="fullname_email">
+                <div class="fullname">
+                  <div class="d_firstname">
+                    <label for="first_name">First Name</label> <br />
+                    <input type="text" class="first_name" id="first_name" />
+                  </div>
+                  <div class="d_lastname">
+                    <label for="last_name">Last Name</label> <br />
+                    <input type="text" class="last_name" id="last_name" />
+                  </div>
+                </div>
+                <div class="email">
+                  <label for="email">Email</label> <br />
+                  <input type="email" class="email" id="email" />
+                </div>
+              </div>
+            </div>
+            <!-- end photo_fullname_email -->
+
+            <div class="headline_phonenumber_address_city_links">
+              <div>
+                <label for="headline">Headline</label> <br />
+                <input type="text" id="headline" class="headline" />
+              </div>
+              <div>
+                <label for="phonenumber">Phone Number</label> <br />
+                <input type="text" id="phonenumber" class="phonenumber" />
+              </div>
+              <div>
+                <label for="address">Address</label> <br />
+                <input type="text" id="address" class="address" />
+              </div>
+              <div class="postcode_city">
+                <div class="d_postcode">
+                  <label for="postcode">Post Code</label> <br />
+                  <input type="text" id="postcode" class="postcode" />
+                </div>
+                <div class="d_city">
+                  <label for="city">City</label> <br />
+                  <input type="text" id="city" class="city" />
+                </div>
+              </div>
+              <div>
+                <label for="website">Website</label> <br />
+                <input type="text" id="website" class="website" />
+              </div>
+              <div>
+                <label for="linkedin">linkedin</label> <br />
+                <input type="text" id="linkedin" class="linkedin" />
+              </div>
+            </div>
+
+            <div class="filed_form">
+              <div>
+                <label for="filed">filed</label>
+                <input type="text" id="filed" />
+              </div>
+              <button class="add" id="save_filed">Save Filed</button>
+            </div>
+            <!-- add filed -->
+            <button class="add" id="add_filed">Add Filed</button>
+          </div>
+        </div>
+        <!-- end input personal data -->
+
+        <!-- start  skills input  -->
+        <div class="input_container">
+          <div class="skills input_title" id="skills">
+            <h3>Skills</h3>
+            <div class="icon">
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="skills_content input_content">
+            <div class="show_skills_input"></div>
+
+            <div class="skill_form">
+              <div>
+                <label for="Skill">Skill</label>
+                <input type="text" id="skill" />
+              </div>
+              <div>
+                <label for="skill_level">Skill Level Or Esperance</label>
+                <input type="text" id="skill_level" />
+              </div>
+              <button class="add" id="save_skill">Save Skill</button>
+            </div>
+
+            <!-- add skills -->
+            <button class="add" id="add_skill">Add Skill</button>
+          </div>
+        </div>
+        <!-- end  skills input  -->
+
+        <!-- start employment input-->
+        <div class="input_container">
+          <div class="employment input_title" id="employment">
+            <h3>Employment</h3>
+            <div class="icon">
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="employment_content input_content">
+            <div class="show_employments_input"></div>
+
+            <div class="employment_form">
+              <div>
+                <label for="employ">Employment</label>
+                <input type="text" id="employ" />
+              </div>
+              <div class="employer_employCity">
+                <div class="d_employer">
+                  <label for="employer">Employer</label> <br />
+                  <input type="text" id="employer" class="employer" />
+                </div>
+                <div class="d_city">
+                  <label for="employ_city">City</label> <br />
+                  <input type="text" id="employ_city" class="employ_city" />
+                </div>
+              </div>
+              <div class="start_end_date">
+                <div class="start_date">
+                  <span>Start Date</span>
+                  <div class="d_start_month">
+                    <label for="start_month">Month</label>
+                    <input
+                      type="text"
+                      class="start_month"
+                      id="start_employment_month"
+                    />
+                  </div>
+                  <div class="d_start_year">
+                    <label for="start_year">Year</label>
+                    <input
+                      type="text"
+                      class="start_year"
+                      id="start_employment_year"
+                    />
+                  </div>
+                </div>
+                <div class="end_date">
+                  <span>End date</span>
+                  <div class="d_end_month">
+                    <label for="end_month">Month</label>
+                    <input
+                      type="text"
+                      class="end_month"
+                      id="end_employment_month"
+                    />
+                  </div>
+                  <div class="d_end_year">
+                    <label for="end_year">Year</label>
+                    <input
+                      type="text"
+                      class="end_year"
+                      id="end_employment_year"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <span>Description</span> <br />
+                <textarea id="employment_description" rows="12"></textarea>
+              </div>
+              <button class="add" id="save_employment">Save Employment</button>
+            </div>
+
+            <!-- add employment -->
+            <button class="add" id="add_employment">Add Employment</button>
+          </div>
+        </div>
+        <!-- end employment input-->
+
+        <!-- start achievement input -->
+        <div class="input_container">
+          <div class="achievement input_title" id="achievement">
+            <h3>Achievement</h3>
+            <div class="icon">
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="achievement_container input_content">
+            <span>Description</span> <br />
+            <textarea id="achievement_description" rows="12"></textarea>
+          </div>
+        </div>
+        <!-- end achievement input -->
+
+        <!-- start education input -->
+        <div class="input_container">
+          <div class="education input_title" id="education">
+            <h3>Education</h3>
+            <div class="icon">
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="education_content input_content">
+            <div class="show_educations_input"></div>
+
+            <div class="education_form">
+              <div>
+                <label for="edu">Education</label>
+                <input type="text" id="edu" />
+              </div>
+              <div class="school_eduCity">
+                <div class="d_school">
+                  <label for="school">School</label> <br />
+                  <input type="text" id="school" class="school" />
+                </div>
+                <div class="d_city">
+                  <label for="edu_city">City</label> <br />
+                  <input type="text" id="edu_city" class="edu_city" />
+                </div>
+              </div>
+              <div class="start_end_date">
+                <div class="start_date">
+                  <span>Start Date</span>
+                  <div class="d_start_month">
+                    <label for="start_month">Month</label>
+                    <input type="text" class="start_month" id="start_month" />
+                  </div>
+                  <div class="d_start_year">
+                    <label for="start_year">Year</label>
+                    <input type="text" class="start_year" id="start_year" />
+                  </div>
+                </div>
+                <div class="end_date">
+                  <span>End date</span>
+                  <div class="d_end_month">
+                    <label for="end_month">Month</label>
+                    <input type="text" class="end_month" id="end_month" />
+                  </div>
+                  <div class="d_end_year">
+                    <label for="end_year">Year</label>
+                    <input type="text" class="end_year" id="end_year" />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <span>Description</span> <br />
+                <textarea id="education_description" rows="12"></textarea>
+              </div>
+              <button class="add" id="save_education">Save Education</button>
+            </div>
+
+            <!-- add education -->
+            <button class="add" id="add_education">Add Education</button>
+          </div>
+        </div>
+        <!-- end education input -->
+
+        <!-- start education input -->
+        <div class="input_container">
+          <div class="languages input_title" id="languages">
+            <h3>Languages</h3>
+            <div class="icon">
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="languages_content input_content">
+            <div class="show_languages_input"></div>
+
+            <div class="language_form">
+              <div>
+                <label for="language">Language</label>
+                <input type="text" id="language" />
+              </div>
+              <div>
+                <label for="language_level">Language Level</label>
+                <input type="text" id="language_level" />
+              </div>
+              <button class="add" id="save_lang">Save Language</button>
+            </div>
+
+            <!-- add education -->
+            <button class="add" id="add_language">Add Language</button>
+          </div>
+        </div>
+        <!-- end education input -->
+
+        <!-- start hobbies input -->
+        <div class="input_container">
+          <div class="hobby input_title" id="hobby">
+            <h3>Hobbies</h3>
+            <div class="icon">
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="hobbies_content input_content">
+            <div class="show_hobbies_input"></div>
+
+            <div class="hobby_form">
+              <div>
+                <label for="hobby">Hobby</label>
+                <textarea id="hobby_input"></textarea>
+              </div>
+              <button class="add" id="save_hobby">Save Hobby</button>
+            </div>
+
+            <!-- add hobby -->
+            <button class="add" id="add_hobby">Add Hobby</button>
+          </div>
+        </div>
+        <!-- end hobbies input -->
+      </section>
+      <!-- end inputs section -->
+
+      <!-- start output section -->
+      <section class="output">
+        <div class="resume">
+          <!-- <div class="resume_content resume_skills">
+            <h3>Skills</h3>
+            <hr />
+            <table>
+              <tr>
+                <th>HTML</th>
+                <td>2 Years</td>
+              </tr>
+              <tr>
+                <th>CSS</th>
+                <td>2 Years</td>
+              </tr>
+              <tr>
+                <th>JavaScript</th>
+                <td>2 Years</td>
+              </tr>
+            </table>
+          </div> -->
+        </div>
+
+        <!-- show resume -->
+        <button class="show_output" id="show">
+          <i class="fa-brands fa-dochub"></i>
+        </button>
+      </section>
+      <!-- end output section -->
+
+      <!-- button download resume -->
+      <button class="download" id="download">
+        <i class="fa-solid fa-download"></i>
+      </button>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

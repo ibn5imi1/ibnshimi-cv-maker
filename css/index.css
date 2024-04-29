@@ -1,0 +1,554 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #eee;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+section {
+    width: 50%;
+    padding: 10px;
+    margin: 8px;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #fff;
+
+}
+
+
+section .input_container {
+    max-height: 90px;
+    border-bottom: 1px solid black;
+    overflow: hidden;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+section .input_container.open {
+    max-height: 999999px;
+}
+
+section .input_content {
+    padding: 0 20px 20px;
+}
+
+
+section .input_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+section .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+    cursor: pointer;
+    border: 2px solid #333;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+section .icon {
+    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+}
+
+section .icon:hover {
+    border-color: purple;
+    background-color: #eee;
+
+}
+
+section .icon.open {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+
+
+
+label {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border: 1px solid transparent;
+    outline: none;
+    background-color: #eee;
+
+}
+
+input:focus {
+    border: 1px solid purple;
+}
+
+
+.add {
+    border: 1px solid transparent;
+    outline: none;
+    background-color: purple;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    transition: ease 0.3s;
+    -webkit-transition: ease 0.3s;
+    -moz-transition: ease 0.3s;
+    -ms-transition: ease 0.3s;
+    -o-transition: ease 0.3s;
+}
+
+.add:hover {
+    border-color: purple;
+    background-color: rgba(128, 0, 128, 0.595);
+}
+
+pre {
+    font-size: 16px;
+    white-space: pre-wrap;
+}
+
+/* start groping styling */
+.filed_form,
+.skill_form,
+.employment_form,
+.education_form,
+.language_form,
+.hobby_form {
+    border: 1px solid purple;
+    padding: 10px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.show_skills_input .skill,
+.show_employments_input .employ,
+.show_educations_input .edu,
+.show_languages_input .lang,
+.show_hobbies_input .hobby {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #eee;
+    border: 1px solid purple;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+i {
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    border: 2px solid purple;
+    width: 100%;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.skills_content div,
+.employment_content div,
+.education_content div,
+.languages_content div,
+.hobbies_content div {
+    margin-bottom: 10px;
+}
+
+/* end groping styling */
+
+/* start personal input */
+.personal_content .photo_fullname_email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.photo_fullname_email .photo {
+    max-width: 130px;
+    max-height: 130px;
+    margin: 0 10px 10px 0;
+    border: 1px solid transparent;
+}
+
+.photo_fullname_email .photo .add_photo {
+    width: 130px;
+    height: 130px;
+    cursor: pointer;
+}
+
+.photo_fullname_email .photo img:hover {
+    border: 1px solid purple;
+}
+
+.photo_fullname_email .photo .photo_edit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.photo_fullname_email .photo .photo_edit>i {
+    cursor: pointer;
+}
+
+.photo_fullname_email .photo .photo_edit ul {
+    position: absolute;
+    left: 200px;
+    top: 146px;
+    background-color: #eee;
+    padding: 10px 0;
+    display: none;
+}
+
+.photo_fullname_email .photo .photo_edit ul.open {
+    display: block;
+}
+
+.photo_fullname_email .photo .photo_edit ul li {
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    cursor: pointer;
+}
+
+.photo_fullname_email .photo .photo_edit ul li:hover {
+    background-color: purple;
+    color: #fff;
+}
+
+.photo_fullname_email .photo .photo_edit ul li i {
+    margin: 0 10px 0 0;
+}
+
+.photo_fullname_email .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.d_firstname,
+.d_lastname {
+    width: 100%;
+    margin: 10px 0 10px;
+}
+
+.d_firstname {
+    margin-right: 10px;
+}
+
+.photo_fullname_email .fullname_email {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.photo_fullname_email .fullname {
+    display: flex;
+    align-items: center;
+}
+
+.headline_phonenumber_address_city_links div {
+    margin-bottom: 10px;
+}
+
+.headline_phonenumber_address_city_links .postcode_city {
+    display: flex;
+
+}
+
+.d_postcode,
+.d_city {
+    width: 100%;
+    margin: 10px 0 10px;
+}
+
+.d_postcode {
+    margin-right: 10px;
+}
+
+
+.edit_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* end personal input */
+
+/* start education and employment input */
+
+.school_eduCity,
+.employer_employCity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.d_city,
+.d_school,
+.d_employer {
+    width: 100%;
+    margin: 10px 0 10px;
+}
+
+.d_school,
+.d_employer {
+    margin-right: 10px;
+}
+
+.start_end_date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.start_date,
+.end_date {
+    width: 100%;
+    border: 2px solid purple;
+    padding: 5px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.start_date {
+    margin-right: 10px;
+}
+
+.d_start_month,
+.d_end_month {
+    width: 100%;
+}
+
+/* .show_educations_input .education_form .education_description {
+    width: 100%;
+    overflow: hidden;
+    white-space: wrap;
+    overflow-wrap: break-word;
+} */
+/* start education and employment input */
+
+.download,
+.show_output {
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+
+/* start hobbies input */
+.show_hobbies_input .hobby .text_hobby {
+    width: 100%;
+    overflow: hidden;
+    white-space: wrap;
+    overflow-wrap: break-word;
+}
+
+/* end hobbies input */
+
+/* start resume */
+.resume {
+    padding: 20px;
+    max-width: 100%;
+}
+
+.resume .resume_content,
+.resume .resume_content hr {
+    margin-bottom: 20px;
+}
+
+
+.resume .resume_name_headline {
+    text-align: center;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.resume .resume_personal .img_table_personal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume .resume_skills table tr,
+.resume .resume_languages table tr,
+.resume .resume_personal table tr {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.resume .resume_skills table tr td,
+.resume .resume_languages table tr td,
+.resume .resume_personal table tr td {
+    display: block;
+    margin-left: 200px;
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+}
+
+.resume .resume_personal .resume_img {
+    width: 130px;
+    height: 130px;
+}
+
+.resume .resume_personal .resume_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.resume .resume_educations .edu_container,
+.resume .resume_employments .emp_container {
+    position: relative;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.resume .resume_educations .edu_container::after,
+.resume .resume_employments .emp_container::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+.resume .resume_educations .edu_container .edu_date,
+.resume .resume_employments .emp_container .emp_date {
+    margin-bottom: 10px;
+}
+
+.resume .resume_educations .edu_container .edu_desc,
+.resume .resume_employments.emp_container .emp_desc {
+    overflow-wrap: break-word;
+}
+
+
+.resume .resume_hobbies ul {
+    width: 100%;
+    padding: 0 10px 0 20px;
+}
+
+.resume .resume_hobbies ul li {
+    margin-bottom: 10px;
+    overflow-wrap: break-word;
+}
+
+/* end resume */
+
+
+
+@media (max-width: 1023px) {
+    main {
+        position: relative;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    section.output {
+        position: absolute;
+        left: 100%;
+        transition: 0.4s;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -ms-transition: 0.4s;
+        -o-transition: 0.4s;
+    }
+
+    section.output.show {
+        left: 0;
+    }
+
+    .photo_fullname_email,
+    .fullname,
+    .postcode_city {
+        flex-direction: column;
+    }
+
+    .start_end_date {
+        flex-direction: column;
+    }
+
+    .show_output {
+        bottom: 90px;
+    }
+
+}
